@@ -7,7 +7,7 @@ import path from 'path'
 const debug = Debug('web');
 const port = process.env.PORT || 3000
 
-debug(`Binding app on port ${port}`)
+console.log(`Binding app on port ${port}`)
 const app = Express()
 
 app.get('/', (req,res) => {
@@ -23,6 +23,6 @@ if (process.env.SEPARATE_PROCESSES != 'true') {
     const child = fork(process)
   }
 
-  debug('SEPARATE_PROCESSES is not set, so spawning other processes as children');
+  console.log('SEPARATE_PROCESSES is not set, so spawning other processes as children');
   launch(`src/mail.js`)
 }

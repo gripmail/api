@@ -21,7 +21,7 @@ class Mail {
   }
 
   onReady() {
-    debug('IMAP connection ready')
+    console.log('IMAP connection ready')
   }
 
   async openBox(box) {
