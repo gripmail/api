@@ -1,6 +1,7 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
 
-export default {}
+export default {};
